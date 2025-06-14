@@ -1,5 +1,5 @@
 @icon("./debugger.png")
-class_name Debugger extends RefCounted
+class_name Debugger extends Node
 
 
 func get_class_name(object: Object) -> String:
@@ -19,7 +19,7 @@ func info(_is_debugging: bool, _class: Object, _message: String) -> void:
 	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] :: ", _message)
 
 
-func warning(_is_debugging: bool, _class: Object, _message: String) -> void:
+func warn(_is_debugging: bool, _class: Object, _message: String) -> void:
 	if not _is_debugging:
 		return
 	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] :: [color=red]", _message, "[/color]")
