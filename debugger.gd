@@ -16,10 +16,10 @@ func get_calling_method() -> String:
 func info(_is_debugging: bool, _class: Object, _message: String) -> void:
 	if not _is_debugging:
 		return
-	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] --- ", _message)
+	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] - ", _message)
 
 
 func warn(_is_debugging: bool, _class: Object, _message: String) -> void:
 	if not _is_debugging:
 		return
-	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] --- [color=red]", _message, "[/color]")
+	print_rich("[color=orange]", get_class_name(_class), "[/color].[color=yellow]", get_calling_method(), "[/color] - [color=red]", _message, "[/color]")
